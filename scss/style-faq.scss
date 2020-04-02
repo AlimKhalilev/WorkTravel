@@ -1,0 +1,155 @@
+@import "header.scss";
+@import "footer.scss";
+
+// === Another Styles ===
+
+.section-footer {
+    background-color: #EFF4F8;
+    margin-top: -1px;
+}
+
+// /=== Another Styles ===
+
+
+// === FAQ ===
+
+.section-faq {
+    background-color: #EFF4F8;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 70px;
+
+    @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+        margin-top: 0;
+        padding-top: 100px;
+    }
+
+    &-description {
+        margin-bottom: 30px;
+
+        &-title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                margin-right: 15px;
+                width: 40px;
+            }
+
+            h1 {
+                font-weight: 600;
+                font-size: 65px;
+
+                @media (max-width: $mobile-width) {
+                    font-size: 28px;
+                }
+            }
+        }
+
+        &-subtitle {
+            text-align: center;
+            font-size: 22px;
+            margin: 10px 0 40px 0;
+
+            @media (max-width: $mobile-width) {
+                font-size: 14px;
+            }
+        }
+
+        &-text {
+            font-size: 22px;
+            line-height: 34px;
+
+            @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                font-size: 20px;
+                line-height: 40px;
+            }
+
+            @media (max-width: $mobile-width) {
+                font-size: 17px;
+            }
+        }
+    }
+
+    &-table {
+        background: #FFFFFF;
+        box-shadow: 0px 1px 68px rgba(90, 197, 255, 0.25);
+        margin-bottom: 50px;
+        padding: 10px 60px;
+
+        @media (max-width: $mobile-width) {
+            padding: 10px 30px;
+        }
+
+
+        &-item {
+            padding: 35px 0;
+            border-bottom: 1px solid #C4C4C4;
+
+            @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                padding: 25px 0;
+            }
+
+            &-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-title {
+                    font-size: 24px;
+                    transition: 0.3s ease-in-out;
+
+                    @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                        font-size: 20px;
+                        line-height: 34px;
+                        max-width: 90%;
+                    }
+
+                    @media (max-width: $mobile-width) {
+                        font-size: 17px;
+                        line-height: 26px;
+                    }
+                }
+                &-img {
+                    cursor: pointer;
+
+                    img {
+                        @media (max-width: $mobile-width) {
+                            width: 35px;
+                        }
+                    }
+                }
+            }
+
+            &-bottom {
+                margin-top: 30px;
+                display: none;
+
+                @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                    margin-top: 0;
+                }
+
+                p {
+                    font-size: 18px;
+                    line-height: 35px;
+
+                    @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                        font-size: 16px;
+                    }
+
+                    @media (max-width: $mobile-width) {
+                        font-size: 15px;
+                        line-height: 30px;
+                    }
+                }
+            }
+
+            &:last-child {
+                border: 0;
+            }
+        }
+    }
+}
+
+// === / FAQ ===

@@ -1,0 +1,378 @@
+@import "mixins.scss";
+
+// === Footer ===
+
+.section-footer {
+    height: 270px;
+    background-image: url($wp_path + "/dist/img/background-footer-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (max-width: $mobile-width) {
+        background-image: url($wp_path + "/dist/img/background-footer-mobile.svg");
+        background-position: top;
+        margin-top: 70px;
+        background-size: cover;
+        height: 570px;
+    } 
+
+    .section-inner {
+        height: 270px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @media (max-width: $mobile-width) {
+            height: inherit;
+            margin: auto 35px;
+        } 
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+
+        @media (max-width: $mobile-width) {
+            flex-direction: column;
+            align-items: flex-start;
+        } 
+        
+        &-logo {
+            background: none;
+            img {
+                width: 255px;
+                height: auto;
+            }
+            
+            @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                img {
+                    width: 200px;
+                }
+            }
+
+            @media (max-width: $mobile-width) {
+                img {
+                    width: 170px;
+                }
+            } 
+        }
+
+        &-items {
+            display: flex;
+
+            @media (max-width: $mobile-width) {
+                flex-direction: column-reverse;
+                width: 100%;
+            } 
+
+            &-numbers {
+                display: grid;
+                grid-row-gap: 25px;
+
+                @media (max-width: $mobile-width) {
+                    margin-top: 10px;
+                    grid-row-gap: 40px;
+                } 
+
+                &-number {
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    @media (max-width: $mobile-width) {
+                        order: 1;
+                    }
+
+                    ul {
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+
+                        li {
+                            display: flex;
+
+                            img {
+                                opacity: 0.3;
+                                margin-right: 8px;
+                            }
+        
+                            a {
+                                color: #fff;
+                                font-weight: bold;
+                                font-size: 18px;
+                                border-bottom: 1px solid transparent;
+                                transition: 0.3s ease-in-out;
+                                text-decoration: none;
+        
+                                &:hover {
+                                    border-bottom: 1px solid #fff;
+                                }
+        
+                                @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &-social {
+                    ul {
+                        display: flex;
+                        list-style-type: none;
+                        padding: 0;
+                        margin: 0;
+
+                        @media (max-width: $mobile-width) {
+                            justify-content: space-around;
+                        }
+
+                        li {
+                            display: flex;
+                            margin: 0 3px;
+
+                            @media (max-width: $mobile-width) {
+                                margin: 0;
+                            }
+
+                            a {
+                                background-repeat: no-repeat;
+                                font-size: 0;
+                                width: 20px;
+                                height: 25px;
+                                background-size: 20px 20px;
+
+                                @media (max-width: $mobile-width) {
+                                    width: 30px;
+                                    height: 35px;
+                                    background-size: 30px 30px;
+                                }
+                            }
+
+                            &.facebook {
+                                a {
+                                    background-image: url($wp_path + "/dist/img/footer-logo-facebook.svg");
+                                    width: 10px;
+                                    background-size: 10px 20px;
+                                    margin-left: 0;
+
+                                    @media (max-width: $mobile-width) {
+                                        width: 15px;
+                                        background-size: 15px 30px;
+                                    }
+                                }
+                            }
+                            &.telegram {
+                                a {
+                                    background-image: url($wp_path + "/dist/img/footer-logo-telegram.svg");
+                                }
+                            }
+                            &.instagram {
+                                a {
+                                    background-image: url($wp_path + "/dist/img/footer-logo-instagram.svg");
+                                }
+                            }
+                            &.viber {
+                                a {
+                                    background-image: url($wp_path + "/dist/img/footer-logo-viber.svg");
+                                }
+                            }
+                            &.whatsapp {
+                                a {
+                                    background-image: url($wp_path + "/dist/img/footer-logo-whatsapp.svg");
+                                }
+                            }
+                        }
+                    }
+                    a {
+                        margin: 0 5px;
+                        border-bottom: 1px solid transparent;
+                        transition: 0.3s ease-in-out;
+
+                        &:hover {
+                            border-bottom: 1px solid #fff;
+                        }
+                    }
+    
+                    @media (max-width: $mobile-width) {
+                        text-align: center;
+                        a {
+                            margin: 0 12px;
+
+                            img {
+                                height: 30px;
+                            }
+                        }
+
+                        :first-child {
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+
+            &-links {
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-gap: 25px 140px;
+                    margin: 0 30px 0 140px;
+    
+                    @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                        grid-gap: 25px 120px;
+                        margin: 0 30px 0 120px;
+                    }
+    
+                    @media (min-width: $mobile-width) and (max-width: $notebook-min-width) {
+                        grid-gap: 25px 80px;
+                        margin: 0 30px 0 80px;
+                        font-size: 14px;
+                    } 
+    
+                    @media (max-width: $mobile-width) {
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 25px 50px;
+                        margin: 30px 0;
+                    } 
+                }
+            }
+        }
+
+        &-links {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    &-rights {
+        text-align: center;
+        margin-top: 60px;
+        color: #D9D9D9;
+
+        @media (max-width: $mobile-width) {
+            margin-top: 30px;
+
+            p {
+                line-height: 34px;
+                text-align: left;
+            }
+        } 
+
+        p {
+            @media (min-width: $mobile-width) and (max-width: $notebook-min-width) {
+                font-size: 14px;
+            } 
+        }
+    }
+}
+
+// === /Footer ===
+
+// === Registration ===
+
+.overlay {
+    z-index: 3;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #000;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.modal {
+    &-form {
+        position: fixed;
+        top: -999px;
+        width: 700px;
+        z-index: 4;
+        background-color: #fff;
+        padding: 40px;
+        border-radius: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.5s ease-in-out;
+
+        @media (max-width: $mobile-width) {
+            padding: 30px 20px;
+            width: 80%;
+            margin: 0;
+        }
+
+        &-title {
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+
+            h2 {
+                margin: 0;
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 32px;
+
+                @media (max-width: $mobile-width) {
+                    font-size: 20px;
+                }
+            }
+
+            span {
+                position: absolute;
+                font-weight: 600;
+                cursor: pointer;
+                top: 8px;
+                right: 8px;
+            }
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-row-gap: 23px;
+
+            p {
+                display: grid;
+            }
+
+            input:focus, textarea:focus {
+                outline: none;
+            }
+
+            input:not([type="submit"]), .selectric, .selectric-items {
+                background: #EFF4F8;
+                border: 1px solid #6869EF;
+                border-radius: 10px;
+                padding: 18px 25px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .selectric-items {
+                overflow: hidden;
+                padding: 0;
+            }
+
+            input[type="submit"] {
+                padding: 22px 0;
+                font-size: 18px;
+
+                @media (max-width: $mobile-width) {
+                    padding: 22px 0;
+                }
+            }
+
+            .wpcf7-response-output {
+                margin: 0;
+            }
+        }
+    }
+}
+
+// === /Registration ===

@@ -1,0 +1,155 @@
+@import "header.scss";
+@import "footer.scss";
+
+// === Another Styles ===
+
+// /=== Another Styles ===
+
+
+// === Reviews ===
+
+.section-reviews {
+    padding-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 70px;
+
+    @media (max-width: $mobile-width) {
+        margin-top: 30px;
+    } 
+
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 70px;
+
+        @media (max-width: $mobile-width) {
+            margin-bottom: 30px;
+        } 
+
+        img {
+            margin-right: 20px;
+
+            @media (max-width: $mobile-width) {
+                width: 40px;
+                height: auto;
+            } 
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 55px;
+
+            @media (max-width: $mobile-width) {
+                font-size: 28px;
+            } 
+        }
+    }
+
+    &-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 30px;
+
+        @media (max-width: $mobile-width) {
+            grid-template-columns: 1fr;
+        } 
+
+        &-card {
+            align-self: flex-start;
+            background: #FFFFFF;
+            box-shadow: 8px 7px 40px rgba(31, 33, 123, 0.2);
+            padding: 50px;
+            max-width: none;
+    
+            @media (max-width: $mobile-width) {
+                padding: 30px;
+                margin: auto;
+            } 
+    
+            &-title {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 20px;
+                
+                @media (max-width: $mobile-width) {
+                    margin-bottom: 10px;
+                } 
+    
+                &-text {
+                    p {
+                        margin: 8px 0;
+    
+                        @media (max-width: $mobile-width) {
+                            margin: 12px 0;
+                            width: 140%;
+                        } 
+                    }
+                    &-name {
+                        font-size: 18px;
+                    }
+    
+                    &-city {
+                        color: #757575;
+                    }
+    
+                    &-time {
+                        color: #3B8BF0;
+                        font-size: 14px;
+                    }
+                }
+    
+                &-social {
+                    display: flex;
+                    a {
+                        img {
+                            width: 35px;
+                            &:last-child {
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            &-subtitle {
+                transition: 0.3s ease-in-out;
+                font-size: 18px;
+                line-height: 28px;
+                overflow: hidden;
+
+                &.hidden {
+                    height: 225px;
+                }
+    
+                @media (max-width: $mobile-width) {
+                    font-size: 16px;
+                } 
+            }
+
+            &-button {
+                margin-top: 30px;
+
+                button {
+                    min-width: 134px;
+                    position: relative;
+                    font-size: 12px;
+                    font-weight: 300;
+                    padding: 5px 40px 5px 20px;
+
+                    img {
+                        transition: 0.3s ease-in-out;
+                        position: absolute;
+                        width: 15px;
+                        height: 15px;
+                        transform: rotate(180deg);
+                        right: 15px;
+                        bottom: 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// === /Reviews ===

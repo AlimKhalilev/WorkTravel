@@ -1,0 +1,251 @@
+@import "header.scss";
+@import "footer.scss";
+
+// === Another Styles ===
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+// /=== Another Styles ===
+
+
+// === Price ===
+
+.section-price {
+    padding-top: 50px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+
+    @media (max-width: $mobile-width) {
+        margin-top: 30px;
+    }
+
+    &-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+
+        @media (max-width: $mobile-width) {
+            margin-bottom: 30px;
+        }
+
+        img {
+            margin-right: 20px;
+            @media (max-width: $mobile-width) {
+                width: 40px;
+                margin-right: 10px;
+            }
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 55px;
+
+            @media (max-width: $mobile-width) {
+                font-size: 26px;
+            }
+        }
+    }
+
+    &-subtitle {
+        margin-bottom: 200px;
+
+        p {
+            font-size: 20px;
+            line-height: 35px;
+            text-align: center;
+
+            @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                line-height: 40px;
+            }
+
+            @media (max-width: $mobile-width) {
+                font-size: 18px;
+                line-height: 35px;
+                text-align: left;
+            }
+        }
+    }
+
+    &-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 25px;
+
+        @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+            grid-column-gap: 15px;
+        }
+
+        @media (max-width: $mobile-width) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 200px;
+        }
+        
+        &-card {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 22px rgba(83, 85, 223, 0.31);
+            border-radius: 10px;
+            padding: 25px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            
+
+            @media (max-width: $mobile-width) {
+                padding: 15px;
+            }
+
+            &-block {
+                position: absolute;
+                top: -140px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 20px;
+                padding: 20px 15px;
+                text-align: center;
+                min-width: 280px;
+                min-height: 180px;
+                transition: 0.3s ease-in-out;
+
+                @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                    min-width: 250px;
+                    min-height: 195px;
+                }
+
+                @media (max-width: $mobile-width) {
+                    min-width: 240px;
+                    min-height: 180px;
+                    font-size: 14px;
+                    top: -160px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 24px;
+                    margin-top: 7px;
+                    color: #fff;
+
+                    @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                        font-size: 14px;
+                    }
+
+                    @media (max-width: $mobile-width) {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            > .start {
+                background: linear-gradient(180deg, #AAC262 0%, #418E67 100%);
+
+                &:hover {
+                    box-shadow: 0px 10px 40px rgba(65, 142, 103, 0.4);
+                }
+            }
+
+            > .standart {
+                background: linear-gradient(180deg, #F29359 0%, #DB4F74 100%);
+
+                &:hover {
+                    box-shadow: 0px 10px 40px rgba(219, 79, 116, 0.4);
+                }
+            }
+
+            > .max {
+                background: linear-gradient(180deg, #AE69F7 0%, #7C64F6 100%);
+
+                &:hover {
+                    box-shadow: 0px 10px 40px rgba(174, 105, 247, 0.4);
+                }
+            }
+
+            &-title {
+                text-align: center;
+                margin-top: 100px;
+
+                @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                    margin-top: 110px;
+                }
+
+                @media (max-width: $mobile-width) {
+                    margin-top: 80px;
+                }
+
+                &-cost {
+                    margin: 20px 0;
+                }
+
+                span, p {
+                    font-weight: bold;
+                    font-size: 36px;
+
+                    @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                        font-size: 25px;
+                    }
+
+                    @media (max-width: $mobile-width) {
+                        font-size: 25px;
+                    }
+                    
+                }
+
+                span {
+                    padding: 5px 20px;
+                    border-radius: 15px;
+                }
+
+                .start {
+                    border: 4px solid #499267;
+                }
+
+                .standart {
+                    border: 4px solid #F08C5C;
+                }
+
+                .max {
+                    border: 4px solid #A868F7;
+                }
+            }
+
+            &-text {
+                display: grid;
+                grid-row-gap: 25px;
+                margin-bottom: 30px;
+
+                @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                    grid-row-gap: 10px;
+                }
+
+                &-item {
+                    display: flex;
+                    align-items: center;
+
+                    p {
+                        line-height: 24px;
+                        margin-left: 15px;
+
+                        @media (min-width: $mobile-width) and (max-width: $notebook-width) {
+                            font-size: 14px;
+                        }
+                    }
+
+                    &.disabled {
+                        color: #B5B5B5;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// === /Price ===
