@@ -241,7 +241,7 @@
 
                 &:before {
                     content: "";
-                    background-image: url($wp_path + "/dist/img/work-arrow.png");
+                    background-image: url($wp_path + "./dist/img/work-arrow.png");
                     background-size: 25px 20px;
                     width: 22px;
                     height: 22px;

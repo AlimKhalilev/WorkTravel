@@ -4,12 +4,12 @@
 
 .section-footer {
     height: 270px;
-    background-image: url($wp_path + "/dist/img/background-footer-desktop.svg");
+    background-image: url($wp_path + "./dist/img/background-footer-desktop.svg");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (max-width: $mobile-width) {
-        background-image: url($wp_path + "/dist/img/background-footer-mobile.svg");
+        background-image: url($wp_path + "./dist/img/background-footer-mobile.svg");
         background-position: top;
         margin-top: 70px;
         background-size: cover;
@@ -153,7 +153,7 @@
 
                             &.facebook {
                                 a {
-                                    background-image: url($wp_path + "/dist/img/footer-logo-facebook.svg");
+                                    background-image: url($wp_path + "./dist/img/footer-logo-facebook.svg");
                                     width: 10px;
                                     background-size: 10px 20px;
                                     margin-left: 0;
@@ -166,22 +166,22 @@
                             }
                             &.telegram {
                                 a {
-                                    background-image: url($wp_path + "/dist/img/footer-logo-telegram.svg");
+                                    background-image: url($wp_path + "./dist/img/footer-logo-telegram.svg");
                                 }
                             }
                             &.instagram {
                                 a {
-                                    background-image: url($wp_path + "/dist/img/footer-logo-instagram.svg");
+                                    background-image: url($wp_path + "./dist/img/footer-logo-instagram.svg");
                                 }
                             }
                             &.viber {
                                 a {
-                                    background-image: url($wp_path + "/dist/img/footer-logo-viber.svg");
+                                    background-image: url($wp_path + "./dist/img/footer-logo-viber.svg");
                                 }
                             }
                             &.whatsapp {
                                 a {
-                                    background-image: url($wp_path + "/dist/img/footer-logo-whatsapp.svg");
+                                    background-image: url($wp_path + "./dist/img/footer-logo-whatsapp.svg");
                                 }
                             }
                         }

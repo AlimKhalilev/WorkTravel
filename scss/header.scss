@@ -290,7 +290,7 @@ button, input[type="submit"] {
 
                         &.facebook {
                             a {
-                                background-image: url($wp_path + "/dist/img/footer-logo-facebook.svg");
+                                background-image: url($wp_path + "./dist/img/footer-logo-facebook.svg");
                                 width: 15px;
                                 background-size: 15px 30px;
                                 margin-left: 0;
@@ -298,22 +298,22 @@ button, input[type="submit"] {
                         }
                         &.telegram {
                             a {
-                                background-image: url($wp_path + "/dist/img/footer-logo-telegram.svg");
+                                background-image: url($wp_path + "./dist/img/footer-logo-telegram.svg");
                             }
                         }
                         &.instagram {
                             a {
-                                background-image: url($wp_path + "/dist/img/footer-logo-instagram.svg");
+                                background-image: url($wp_path + "./dist/img/footer-logo-instagram.svg");
                             }
                         }
                         &.viber {
                             a {
-                                background-image: url($wp_path + "/dist/img/footer-logo-viber.svg");
+                                background-image: url($wp_path + "./dist/img/footer-logo-viber.svg");
                             }
                         }
                         &.whatsapp {
                             a {
-                                background-image: url($wp_path + "/dist/img/footer-logo-whatsapp.svg");
+                                background-image: url($wp_path + "./dist/img/footer-logo-whatsapp.svg");
                             }
                         }
                     }
@@ -369,7 +369,7 @@ button, input[type="submit"] {
 
                 &::before {
                     content: "";
-                    background-image: url($wp_path + "/dist/img/logo_registration.svg");
+                    background-image: url($wp_path + "./dist/img/logo_registration.svg");
                     background-size: 15px 20px;
                     width: 15px;
                     height: 20px;

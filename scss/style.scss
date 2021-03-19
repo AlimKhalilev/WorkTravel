@@ -80,7 +80,7 @@
 
 .section-head {
     height: 836px;
-    background-image: url($wp_path + "/dist/img/background-head-desktop.svg");
+    background-image: url($wp_path + "./dist/img/background-head-desktop.svg");
     background-repeat: no-repeat;
     color: #fff;
 
@@ -94,7 +94,7 @@
     }
 
     @media (max-width: $mobile-width) {
-        background-image: url($wp_path + "/dist/img/background-head-mobile.svg");
+        background-image: url($wp_path + "./dist/img/background-head-mobile.svg");
         background-size: 100%;
         background-position: bottom;
         height: 480px;
@@ -355,7 +355,7 @@
 
 .section-vacancy {
     margin-top: 100px;
-    background-image: url($wp_path + "/dist/img/vacancy-bg.svg");
+    background-image: url($wp_path + "./dist/img/vacancy-bg.svg");
     min-height: 800px;
     background-repeat: no-repeat;
     background-position: 50% 0%;
@@ -368,7 +368,7 @@
 
     @media (max-width: $mobile-width) {
         background-position: 50% 50%;
-        background-image: url($wp_path + "/dist/img/vacancy-bg-mobile.svg");
+        background-image: url($wp_path + "./dist/img/vacancy-bg-mobile.svg");
         margin-top: 0;
         min-height: 620px;
     } 

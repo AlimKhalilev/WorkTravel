@@ -22,7 +22,7 @@ function gulp_css(done) {
 			suffix: '.min'
 		}))
 		.pipe(sourcemaps.write('./'))
-		.pipe(gulp.dest('./dist/css/'))
+		.pipe(gulp.dest('../dist/css/'))
 	done();
 }
 
@@ -34,7 +34,7 @@ function gulp_js(done) {
          },
          noSource: true
 		}))
-		.pipe(gulp.dest('./dist/js/'))
+		.pipe(gulp.dest('../dist/js/'))
 	done();
 }
 
