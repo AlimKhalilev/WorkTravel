@@ -1,6 +1,6 @@
 $('.section-faq-table-item-top-img').click(function () {
     //var src = "http://www.stud-hub.com.ua/wp-content/themes/worktravel";
-    var src = "../.";
+    var src = "";
     var comments = $(this).parent().next();
     var child = $(this).children();
     var title = $(this).prev();
